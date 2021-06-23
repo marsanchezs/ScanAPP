@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoActivity"
+    tools:context=".UserIngresaAreaActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/barraSuperiorIA"
+            layout="@layout/barra_superior" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecuadro"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/logo"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/logo"
+                android:onClick="irUserLogin"
+                app:srcCompat="@drawable/logo" />
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtAreaUIA"
+                    style="@style/texto"
+                    android:background="@drawable/borde"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:hint="@string/ingresarArea"
+                    android:textSize="12sp"
+                    android:inputType="text"
+                    android:autofillHints=""
+                    android:imeOptions="actionDone"/>
+
+                <Space style="@style/espacioVertical3" />
+
+                <Button
+                    android:id="@+id/btnScanAreaUIA"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/scan"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtUbicacionUIA"
+                    style="@style/texto"
+                    android:background="@drawable/borde"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:hint="@string/ingresarUbicacion"
+                    android:textSize="12sp"
+                    android:inputType="text"
+                    android:autofillHints=""
+                    android:imeOptions="actionDone"/>
+
+                <Space style="@style/espacioVertical3" />
+
+                <Button
+                    android:id="@+id/btnScanUbicacionUIA"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/scan"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+            </TableRow>
+
+            <!--<EditText
+                android:id="@+id/edtAreaUIA"
+                style="@style/texto"
+                android:background="@drawable/borde"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:gravity="center"
+                android:hint="@string/ingresarArea"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textSize="12sp" />
+
+            <Space style="@style/espacio2" />
+
+            <EditText
+                android:id="@+id/edtUbicacionUIA"
+                style="@style/texto"
+                android:background="@drawable/borde"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:gravity="center"
+                android:hint="@string/ingresarUbicacion"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textSize="12sp" />-->
+
+            <Space style="@style/espacio2" />
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnUsrArea"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="validar"
+                    android:text="@string/ingresar"
+                    android:textSize="20sp"/>
+
+                <Space style="@style/espacio2" />
+
+                <Button
+                    android:id="@+id/btnEnviarArea"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="irEnviarAreas"
+                    android:text="@string/enviarAreas"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserUbicacion">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INGRESO DE ÁREAS"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnUsrSalir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_background"
+            android:onClick="openVentanaUserLogin"
+            android:padding="3dip"
+            android:text="Volver" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

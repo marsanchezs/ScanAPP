@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoActivity"
+    tools:context=".AdminMenuActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/barraSuperiorAM"
+            layout="@layout/barra_superior" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecuadro"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/logo"
+                android:onClick="irAdminLogin"
+                app:srcCompat="@drawable/logo"
+                android:contentDescription="@string/logo" />
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCrearUsuario"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="irAdminUsuarios"
+                    android:text="@string/crearUsuario" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnAdminConfServer"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="irAdminServerWS"
+                    android:text="@string/confServer" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnEliminarArea"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="irAdminEliminarArea"
+                    android:text="@string/eliminarArea" />
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnReiniciarApp"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="reiniciarAplicacion"
+                    android:text="@string/reiniciarApp" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnCopiarBase"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="solicitarPermisos"
+                    android:text="@string/activarBase" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnGenerarRespaldo"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="backupdDatabase"
+                    android:text="@string/generarRespaldo" />
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnReportesAM"
+                    style="@style/texto"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:onClick="generarReportes"
+                    android:text="@string/reportes" />
+
+            </TableRow>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <TableRow
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <TextView
+            android:id="@+id/txtDispositivosAM"
+            style="@style/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorRecuadro"
+            android:text="@string/dispositivos" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnConectarAM"
+                style="@style/texto"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:onClick="generarReportes"
+                android:text="@string/conectar" />
+
+        </TableRow>
+    </TableRow>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENÚ ADMINISTRADOR"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSalirMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:background="@drawable/button_background"
+        android:text="Volver"
+        app:layout_constraintTop_toBottomOf="@+id/btnReiniciarApp"
+        tools:layout_editor_absoluteX="2dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/marsanchezs/AndroidStudioProjects/ScanAPP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/home/marsanchezs/.gradle/caches/transforms-1/files-1.1/material-1.4.0-rc01.aar/80d5417190a97dcc8ad20d7f579acf16/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        }
+    ]
+}

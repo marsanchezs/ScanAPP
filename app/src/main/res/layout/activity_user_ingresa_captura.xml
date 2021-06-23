@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoActivity"
+    tools:context=".UserGuardarCapturaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/barraSuperiorIC"
+            layout="@layout/barra_superior" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecuadro"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imgLogoUIC"
+                style="@style/logo"
+                android:layout_height="60dp"
+                android:contentDescription="@string/logo"
+                android:onClick="irIngresarArea"
+                app:srcCompat="@drawable/logo" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtTipoScanUIC"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/scanear"
+                    android:textSize="14sp"
+                    tools:ignore="SmallSp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbCantidadUIC"
+                        style="@style/texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="mostrarOcultar"
+                        android:text="@string/cantidad"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        app:buttonTint="@color/colorLetra"/>
+
+                    <RadioButton
+                        android:id="@+id/rbUnoxUnoUIC"
+                        style="@style/texto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="mostrarOcultar"
+                        android:text="@string/unoAUno"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"
+                        app:buttonTint="@color/colorLetra"/>
+                </RadioGroup>
+            </TableRow>
+
+            <Space style="@style/espacio2" />
+
+            <EditText
+                android:id="@+id/edtCodigoUIC"
+                style="@style/texto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borde"
+                android:imeOptions="actionDone"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:hint="@string/codigo"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:buttonTint="@color/colorBordeBoton"/>
+
+            <Button
+                android:id="@+id/btnUsrScan"
+                style="@style/texto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/scan"
+                android:textSize="20sp"
+                tools:ignore="SmallSp"/>
+
+            <Space style="@style/espacio2" />
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtDescripcionUIC"
+                    style="@style/texto"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descripcion"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/txtDetalleDescripcionUIC"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSkuUIC"
+                    style="@style/texto"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/sku"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/txtDetalleSkuUIC"
+                    style="@style/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <EditText
+                android:id="@+id/edtCantidadUIC"
+                style="@style/texto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borde"
+                android:ems="10"
+                android:hint="@string/cantidad"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="14sp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/edtUnoxUnoUIC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borde"
+                android:ems="10"
+                android:hint="@string/uno"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="0"
+                android:textColor="@color/colorLetra"
+                android:textColorHint="@color/colorLetra"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:autofillHints=""
+                android:visibility="gone"/>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnUsrGrabar"
+                    style="@style/texto"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="guardarCaptura"
+                    android:text="@string/siguiente"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp"
+                    android:visibility="gone"/>
+
+                <!--<Space style="@style/espacioVertical" />-->
+
+                <Button
+                    android:id="@+id/btnUsrRevisar"
+                    style="@style/texto"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="irUserRevisar"
+                    android:text="@string/revisar"
+                    android:textSize="20sp"
+                    tools:ignore="SmallSp"/>
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrCerrar"
+                    style="@style/texto"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="cerrarArea"
+                    android:text="@string/cerrar"
+                    android:textSize="20sp"
+                    tools:ignore="SmallSp"/>
+
+            </TableRow>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

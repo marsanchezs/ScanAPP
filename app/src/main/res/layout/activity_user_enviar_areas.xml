@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoActivity"
+    tools:context=".UserEnviarAreasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/barraSuperiorEA"
+            layout="@layout/barra_superior" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecuadro"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/logo"
+                android:layout_width="250dp"
+                android:contentDescription="@string/logo"
+                android:onClick="irIngresarArea"
+                app:srcCompat="@drawable/logo" />
+
+            <Space style="@style/espacio" />
+
+            <TextView
+                android:id="@+id/listUserArea"
+                style="@style/texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/areasRegistradas"
+                android:textSize="20sp" />
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde">
+
+                    <Spinner
+                        android:id="@+id/listUserAreaEnviar"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp" />
+                </FrameLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/btnUsrEnviarAreas"
+                        style="@style/texto"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/button_background"
+                        android:onClick="enviarAreasCerradas"
+                        android:text="@string/enviar" />
+                </TableRow>
+
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TextView
+                android:id="@+id/listUserAreaEnv"
+                style="@style/texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/areasEnviadas"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borde">
+
+                    <Spinner
+                        android:id="@+id/listUserAreaEnviadas"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp" />
+                </FrameLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <Button
+                        android:id="@+id/btnUsrEnviarAreasEnv"
+                        style="@style/texto"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:onClick="reEnviarAreasCerradas"
+                        android:text="@string/reEnviar" />
+                </TableRow>
+
+            </TableRow>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="ENVÍO DE ÁREAS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUsrEnvVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_background"
+        android:onClick="openVentanaUserIngresaArea"
+        android:text="Volver"
+        app:layout_constraintTop_toBottomOf="@+id/listUserAreaEnviadas"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

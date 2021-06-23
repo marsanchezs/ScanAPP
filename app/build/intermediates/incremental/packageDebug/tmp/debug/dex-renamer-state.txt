@@ -1,0 +1,4 @@
+#Fri Jun 18 15:32:31 CLT 2021
+base.0=/home/marsanchezs/AndroidStudioProjects/ScanAPP/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

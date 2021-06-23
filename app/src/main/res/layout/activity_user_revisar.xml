@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondoActivity"
+    tools:context=".UserLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/barraSuperiorRP"
+            layout="@layout/barra_superior" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRecuadro"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/logo"
+                android:contentDescription="@string/logo"
+                android:onClick="irIngresarCaptura"
+                app:srcCompat="@drawable/logo" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtNumerocapturaUR"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/numeroCaptura"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal" />
+            </TableRow>
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/lbUserDescArea"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/area"
+                    android:textSize="12sp" />
+
+                <Space style="@style/espacioVertical2" />
+
+                <TextView
+                    android:id="@+id/listUserDescUbicacionOld"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ubicacion"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/lbUserDetEan"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ean"
+                    android:textSize="12sp" />
+
+                <Space style="@style/espacioVertical2" />
+
+                <TextView
+                    android:id="@+id/txtCantidad"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/cantidad"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/lbDetDescripcion"
+                    style="@style/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descripcion"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal" />
+            </TableRow>
+
+            <Space style="@style/espacio2" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnUsrGoFirst"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:drawableStart="@drawable/baseline_skip_previous_black_18dp"
+                    android:drawableLeft="@drawable/baseline_skip_previous_black_18dp"
+                    android:onClick="retrocederTodos"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAllCaps="false" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrGoPrev"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:drawableStart="@drawable/baseline_fast_rewind_black_18dp"
+                    android:drawableLeft="@drawable/baseline_fast_rewind_black_18dp"
+                    android:onClick="retrocederUnPuesto"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAllCaps="false" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrGoNext"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:drawableStart="@drawable/baseline_fast_forward_black_18dp"
+                    android:drawableLeft="@drawable/baseline_fast_forward_black_18dp"
+                    android:onClick="avanzarUnPuesto"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAllCaps="false" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrGoLast"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:drawableStart="@drawable/baseline_skip_next_black_18dp"
+                    android:drawableLeft="@drawable/baseline_skip_next_black_18dp"
+                    android:onClick="avanzarTodos"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textAllCaps="false" />
+            </TableRow>
+
+            <Space style="@style/espacio" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnUsrModCant"
+                    style="@style/texto"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="modificarCantidad"
+                    android:text="@string/modCantidad"
+                    android:textSize="12sp" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrModUbi"
+                    style="@style/texto"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="modificaarUbicacion"
+                    android:text="@string/modUbicacion"
+                    android:textSize="12sp" />
+
+                <Space style="@style/espacioVertical" />
+
+                <Button
+                    android:id="@+id/btnUsrEliminar"
+                    style="@style/texto"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_background"
+                    android:onClick="eliminarCaptura"
+                    android:text="@string/eliminarCaptura"
+                    android:textSize="12sp" />
+            </TableRow>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REVISIÓN DE PRODUCTOS"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUsrSalir"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_background"
+        android:onClick="openVentanaUserIngresaCaptura"
+        android:text=" Volver "
+        app:layout_constraintTop_toBottomOf="@+id/tableRow9"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUsrSalir">
+
+        <TextView
+            android:id="@+id/lbUserListAreas"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/lbUserAreaSel"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/lbUserDetCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:hint="CANTIDAD"
+            android:inputType="number"
+            android:numeric="integer"
+            android:text=""
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </TableRow>
+
+    <EditText
+        android:id="@+id/listUserDescUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

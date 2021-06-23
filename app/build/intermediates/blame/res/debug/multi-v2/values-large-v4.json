@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/marsanchezs/AndroidStudioProjects/ScanAPP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "/home/marsanchezs/AndroidStudioProjects/ScanAPP/app/src/main/res/values-large/dimens.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endColumns": "37",
+                        "endOffsets": "89"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "532",
+                        "endColumns": "37",
+                        "endOffsets": "565"
+                    }
+                },
+                {
+                    "source": "/home/marsanchezs/.gradle/caches/transforms-1/files-1.1/appcompat-1.2.0.aar/70473062c273ff09156ea46a5aa858f5/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,570,674",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,669,785"
+                    }
+                },
+                {
+                    "source": "/home/marsanchezs/.gradle/caches/transforms-1/files-1.1/material-1.4.0-rc01.aar/80d5417190a97dcc8ad20d7f579acf16/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "12,13",
+                        "startColumns": "4,4",
+                        "startOffsets": "790,912",
+                        "endColumns": "121,133",
+                        "endOffsets": "907,1041"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#E69CEFE7</color>
+    <color name="colorLetra">#E69CEFE7</color>
+    <color name="colorLetraBoton">#082F2C</color>
+    <color name="colorFondoActivity">#E6369F96</color>
+    <color name="colorRecuadro">#E62F586A</color>
+    <color name="colorBoton">#E62E8A82</color>
+    <color name="colorBordeBoton">#E69CEFE7</color>
+    <color name="colorBarra">#E6399C93</color>
+    <color name="colorFondoMensaje">#082F2C</color>
+    <color name="colorLetraMensaje">#E69CEFE7</color>
+    <color name="colorFoco">#BCBCBA</color>
+</resources>

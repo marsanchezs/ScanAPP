@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorRecuadro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/imgDR"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/icono"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/icono_pdf" />
+
+            <TextView
+                android:id="@+id/txtTituloDR"
+                style="@style/texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/reportes"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <!--<TextView
+            android:id="@+id/txtMensajeDR"
+            style="@style/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:text="@string/seleccionar"
+            android:textStyle="bold"
+            android:textSize="20sp" />-->
+
+        <FrameLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_gravity="center"
+            android:background="@color/colorLetra">
+
+            <Spinner
+                android:id="@+id/spReportesDR"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </FrameLayout>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/btnConfirmarDR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/icono_aceptar"
+                android:contentDescription="@string/icono"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:id="@+id/btnCancelarDR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/icono_cancelar2"
+                android:contentDescription="@string/icono"
+                android:scaleType="fitCenter" />
+        </TableRow>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
